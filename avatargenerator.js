@@ -154,5 +154,4 @@ bot.onText(/^\/test/, (msg) => {});
     Created by: Rubén Palomo Fontán
     LinkedIn: https://www.linkedin.com/in/ruben-palomo-fontan/
     Contact: ruben.palomof@gmail.com
- 
  */
