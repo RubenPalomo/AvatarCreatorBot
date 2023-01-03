@@ -94,6 +94,13 @@ bot.onText(/^\/generateRobot(.+)/, (msg, match) => {
   });
 });
 
+// Command to generate a default avatar
+bot.onText(/^\/generateDefault/, (msg) => {
+  bot.sendPhoto(msg.chat.id, generateGravatar("mp", ""), {
+    caption: `Default avatar`,
+  });
+});
+
 // Start command
 bot.onText(/^\/start/, (msg) =>
   bot.sendMessage(
@@ -133,6 +140,7 @@ bot.onText(/^\/help/, (msg) =>
       "4. Use _/generateWavatar_ followed by a text to generate a wavatar with the text id.\n" +
       "5. Use _/generateRetro_ followed by a text to generate a retro avatar with the text id.\n" +
       "6. Use _/generateRobot_ followed by a text to generate a robot avatar with the text id.\n" +
+      "7. Use _/generateDefault_ to generate a default avatar." +
       "\nIf you have any issues or questions type to *@RubenPal*✏️",
     { parse_mode: "Markdown" }
   )
@@ -142,7 +150,7 @@ bot.onText(/^\/help/, (msg) =>
 bot.onText(/^\/test/, (msg) => {});
 
 /*
-    Bot available soon in telegram ( @XXXXX )
+    Bot available soon in telegram ( @AvatarCreatorBot )
     Created by: Rubén Palomo Fontán
     LinkedIn: https://www.linkedin.com/in/ruben-palomo-fontan/
     Contact: ruben.palomof@gmail.comS
